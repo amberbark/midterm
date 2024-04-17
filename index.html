@@ -60,6 +60,10 @@
                 view: view
             });
 
+         const existingLayer = new FeatureLayer({
+                url: "https://ca.dep.state.fl.us/arcgis/rest/services/OpenData/SPRINGS/MapServer/1/"
+            });
+
             // Create featurelayer from feature service 
             const layer = new FeatureLayer({ 
             // URL to the service 
