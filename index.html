@@ -18,10 +18,11 @@
         }
 
         .addRecordBtn {
-        position: absolute;
+        position: fixed; /* Change from absolute to fixed */
         z-index: 10;
-        top: 60px; /* Adjust this value based on the height of your search bar */
-        right: 10px;
+        bottom: 20px; /* Change from top to bottom */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for the width of the button */
         background-color: #0079c1;
         color: white;
         padding: 8px 16px;
@@ -156,7 +157,7 @@
     <div class="top-bar">
         Spring Spotter FL 
         <div class="subheading"></div>
-        <div class="second-subheading">Use this map to explore your local springs and share your experiences to provide up-to-date monitoring of our Florida Springs.</div>
+        <div class="second-subheading">Use this map to explore your local springs and share your experiences to provide up-to-date monitoring of our Florida Springs!</div>
     </div>
     
     <a href="https://arcg.is/1W5rCK2" target="_blank" class="addRecordBtn">Log Visit!</a>
