@@ -61,8 +61,33 @@
             });
 
             const existingLayer = new FeatureLayer({
-                url: "https://ca.dep.state.fl.us/arcgis/rest/services/OpenData/SPRINGS/MapServer/1/"
-            });
+                url: "https://ca.dep.state.fl.us/arcgis/rest/services/OpenData/SPRINGS/MapServer/1/",
+                popupTemplate: {  // Enable Popup
+                    title: "{SPRING_NAME}", // Show attribute value
+                    content: [  // Display text in pop-up
+                    {
+                        type: "fields",
+                        fieldInfos: [
+                        {
+                            fieldName: "WTRBDYNAME",
+                            label: "Waterbody Name",
+                            visible: true
+                        },
+                        {
+                            fieldName: "COUNTY",
+                            label: "County",
+                            visible: true
+                        },
+                        {
+                            fieldName: "MAGNITUDE",
+                            label: "Magnitude",
+                            visible: true
+                        }
+                        ]
+                    }
+                    ]
+                }
+                });
 
             // Add the existingLayer to the map
             map.add(existingLayer);
