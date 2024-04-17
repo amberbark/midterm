@@ -95,7 +95,7 @@
             const newLayer = new FeatureLayer({
                 url: "https://atoll.floridamarine.org/arcgis/rest/services/FWC_GIS/OpenData_FreshEco/MapServer/2",
                 labelingInfo: [{
-                    labelExpressionInfo: { expression: "$feature.RIVER_FIELD" }, // Replace RIVER_FIELD with the actual field name for the river
+                    labelExpressionInfo: { expression: "NAME" },
                     symbol: {
                     type: "text",
                     color: "#FFFFFF",
