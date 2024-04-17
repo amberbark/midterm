@@ -92,6 +92,13 @@
             // Add the existingLayer to the map
             map.add(existingLayer);
 
+            const newLayer = new FeatureLayer({
+                url: "https://atoll.floridamarine.org/arcgis/rest/services/FWC_GIS/OpenData_FreshEco/MapServer/2"
+            });
+
+            // Add the newLayer to the map
+            map.add(newLayer);
+
             // Create featurelayer from feature service 
             const layer = new FeatureLayer({ 
             // URL to the service 
